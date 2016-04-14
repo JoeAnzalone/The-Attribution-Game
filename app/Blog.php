@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use \Cache;
 
 class Blog extends Model
 {
@@ -36,6 +37,10 @@ class Blog extends Model
     }
 
     public function allNames() {
+        if (Cache::has('allNames')) {
+            return Cache::get('allNames');
+        }
+
         $total_posts = $this->_totalPosts();
         $pages = round($total_posts / $this->postsPerPage);
 
@@ -49,6 +54,8 @@ class Blog extends Model
         }
         $names = array_unique($names);
         $names = array_values($names);
+
+        Cache::put('allNames', $names, 60);
 
         return $names;
     }
