@@ -66,3 +66,10 @@ a.back:focus span {
     font-size: 0.9em;
     text-align: center;
 }
+
+.post .text {
+    background: #eee;
+    padding: 15px;
+    color: #666;
+    border-radius: 3px;
+}

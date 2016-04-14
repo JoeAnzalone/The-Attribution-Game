@@ -16,14 +16,14 @@ class Blog extends Model
                                     );
     }
 
-    private function _totalPosts() {
-        $response = $this->client->getBlogInfo($this->blog_name);
-        return $response->blog->posts;
+    private function _totalPosts($type = null) {
+        $response = $this->client->getBlogPosts($this->blog_name, ['type' => $type, 'limit' => 1]);
+        return $response->total_posts;
     }
 
     private function _namesByOffset($offset, $limit = 20) {
 
-        $options = ['offset' => $offset, 'type' => 'quote'];
+        $options = ['offset' => $offset, 'limit' => $limit, 'type' => 'quote'];
         $response = $this->client->getBlogPosts($this->blog_name, $options);
         $names = [];
 
@@ -81,5 +81,14 @@ class Blog extends Model
         shuffle($names);
 
         return $names;
+    }
+
+    public function randomQuotePost() {
+        $total_posts = $this->_totalPosts('quote');
+        $offset = rand(0, $total_posts - 1);
+        $options = ['offset' => $offset, 'limit' => 1, 'type' => 'quote'];
+        $response = $this->client->getBlogPosts($this->blog_name, $options);
+
+        return $response->posts[0];
     }
 }

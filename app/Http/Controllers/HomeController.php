@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use \App\Blog;
+
 class HomeController extends Controller
 {
     /**
@@ -16,7 +18,14 @@ class HomeController extends Controller
 
     public function showQuiz()
     {
-        $view_variables = [];
+        $blog = new Blog(env('BLOG_NAME'));
+        $post = $blog->randomQuotePost();
+        $correct = $post->tags[0];
+        $correct = ucwords($correct);
+        $choices = $blog->randomNames(4, $correct);
+
+        $view_variables = ['post' => $post, 'choices' => $choices];
+
         return $this->setPageContent(view('main', $view_variables));
     }
 }

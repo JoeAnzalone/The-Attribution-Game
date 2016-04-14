@@ -38,4 +38,16 @@ class BlogController extends Controller {
         $names = $blog->randomNames(4, $include);
         return response()->json($names);
     }
+
+    public function getRandomQuotePost(Request $request) {
+        $blog = new Blog(env('BLOG_NAME'));
+        $post = $blog->randomQuotePost();
+        return response()->json($post);
+    }
+
+    public function getRandomQuotePostJson(Request $request) {
+        $blog = new Blog(env('BLOG_NAME'));
+        $post = $blog->randomQuotePost();
+        return response()->json($post);
+    }
 }
