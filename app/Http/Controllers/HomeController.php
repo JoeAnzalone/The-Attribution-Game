@@ -16,6 +16,7 @@ class HomeController extends Controller
 
     public function showQuiz()
     {
-        return 'Coming soon! :]';
+        $view_variables = [];
+        return $this->setPageContent(view('main', $view_variables));
     }
 }

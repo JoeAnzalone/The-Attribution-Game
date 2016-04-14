@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use \App\Blog;
+use Illuminate\Http\Request;
 
 class BlogController extends Controller {
 
@@ -28,6 +29,13 @@ class BlogController extends Controller {
     public function getNamesJson() {
         $blog = new Blog(env('BLOG_NAME'));
         $names = $blog->allNames();
+        return response()->json($names);
+    }
+
+    public function getRandomNamesJson(Request $request) {
+        $blog = new Blog(env('BLOG_NAME'));
+        $include = $request->input('correct', false);
+        $names = $blog->randomNames(4, $include);
         return response()->json($names);
     }
 }
