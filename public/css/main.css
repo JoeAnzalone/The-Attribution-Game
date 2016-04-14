@@ -1,0 +1,68 @@
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
+body {
+    background: #2c4762;
+    color: #fff;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 21px;
+}
+
+.page-wrap {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    text-decoration: underline;
+}
+
+input {
+    display: block;
+    float: left;
+    font-size: 1em;
+    max-width: 545px;
+    width: 100%;
+}
+
+button {
+    font-size: 1em;
+    cursor: pointer;
+}
+
+a.back span,
+a.back span {
+    display: inline-block;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+}
+
+a.back:hover span,
+a.back:focus span {
+    -webkit-transform: rotate(-320deg);
+    -moz-transform: rotate(-320deg);
+    -ms-transform: rotate(-320deg);
+    -o-transform: rotate(-320deg);
+    transform: rotate(-320deg);
+}
+
+.error {
+    background: #d95e40;
+    color: #fff;
+    border: 1px solid #f00;
+    padding: 0.5em;
+    border-radius: 0.15em;
+    font-size: 0.9em;
+    text-align: center;
+}

@@ -11,6 +11,6 @@
 |
 */
 
-$app->get('/', function () use ($app) {
-    return $app->version();
-});
+$app->get('/', 'HomeController@showQuiz');
+$app->get('/names', 'BlogController@getNames');
+$app->get('/names/json', 'BlogController@getNamesJson');
