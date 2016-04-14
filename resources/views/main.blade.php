@@ -1,9 +1,7 @@
 <h1>The Attribution Game™</h1>
 
 <div class="post">
-
-    <div class="text">{!! $post->text !!}</div>
-
+    <blockquote class="text">{!! $post->text !!}</blockquote>
 </div>
 
 <ul class="choices">
