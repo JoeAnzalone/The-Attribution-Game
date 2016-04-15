@@ -20,7 +20,7 @@ class HomeController extends Controller
     {
         $blog = new Blog(env('BLOG_NAME'));
         $post = $blog->randomQuotePost();
-        $correct = $post->tags[0];
+        $correct = $post->tags ? $post->tags[0] : 'Unknown';
         $correct = ucwords($correct);
         $choices = $blog->randomNames(4, $correct);
 
