@@ -12,6 +12,7 @@
 */
 
 $app->get('/', 'HomeController@showQuiz');
+$app->get('/answer', 'HomeController@checkAnswer');
 $app->get('/names', 'BlogController@getNames');
 $app->get('/names/json', 'BlogController@getNamesJson');
 $app->get('/choices/json', 'BlogController@getRandomNamesJson');

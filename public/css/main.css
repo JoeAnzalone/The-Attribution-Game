@@ -78,6 +78,10 @@ a.back:focus span {
     text-align: center;
 }
 
+.response {
+    text-align: center;
+}
+
 .post {
     text-align: center;
 }
@@ -100,4 +104,17 @@ a.back:focus span {
 
 .post .text:after {
     content: close-quote;
+}
+
+.choices {
+    text-align: center;
+}
+
+.choices li {
+    display: block;
+}
+
+footer {
+    font-size: 10px;
+    opacity: 0.5;
 }

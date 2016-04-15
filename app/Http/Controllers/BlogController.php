@@ -39,13 +39,13 @@ class BlogController extends Controller {
         return response()->json($names);
     }
 
-    public function getRandomQuotePost(Request $request) {
+    public function getRandomQuotePost() {
         $blog = new Blog(env('BLOG_NAME'));
         $post = $blog->randomQuotePost();
         return response()->json($post);
     }
 
-    public function getRandomQuotePostJson(Request $request) {
+    public function getRandomQuotePostJson() {
         $blog = new Blog(env('BLOG_NAME'));
         $post = $blog->randomQuotePost();
         return response()->json($post);

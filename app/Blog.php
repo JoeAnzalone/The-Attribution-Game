@@ -91,4 +91,11 @@ class Blog extends Model
 
         return $response->posts[0];
     }
+
+    public function getPost($id) {
+        $options = ['id' => $id];
+        $response = $this->client->getBlogPosts($this->blog_name, $options);
+
+        return $response->posts[0];
+    }
 }
