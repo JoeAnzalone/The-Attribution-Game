@@ -21,9 +21,9 @@ class HomeController extends Controller
     {
         $blog = new Blog(env('BLOG_NAME'));
         $post = $blog->randomQuotePost();
-        $correct = $post->tags ? $post->tags[0] : 'Unknown';
-        $correct = ucwords($correct);
-        $choices = $blog->randomNames(4, $correct);
+        $correct_answer = $post->tags ? $post->tags[0] : 'Unknown';
+        $correct_answer = ucwords($correct_answer);
+        $choices = $blog->randomNames(4, $correct_answer);
 
         $view_variables = ['post' => $post, 'choices' => $choices];
 
@@ -37,6 +37,7 @@ class HomeController extends Controller
         $post = $blog->getPost($post_id);
 
         $correct_answer = $post->tags ? $post->tags[0] : 'Unknown';
+        $correct_answer = ucwords($correct_answer);
         $guess = $request->input('guess', false);
 
         $is_correct = ($correct_answer === $guess);
