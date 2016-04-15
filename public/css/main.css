@@ -67,6 +67,17 @@ a.back:focus span {
     text-align: center;
 }
 
+.site-title {
+    font-size: 15px;
+}
+
+.prompt {
+    font-size: 20px;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+}
+
 .post {
     text-align: center;
 }
@@ -74,6 +85,7 @@ a.back:focus span {
 .post .text {
     background: #fff;
     color: rgb(68, 68, 68);
+    margin: 0;
     padding: 15px;
     border-radius: 3px;
     font-family: Georgia, Times, serif;

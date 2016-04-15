@@ -1,4 +1,6 @@
-<h1>The Attribution Game™</h1>
+<h1 class="site-title">The Attribution Game™</h1>
+
+<h2 class="prompt">Who said this?</h2>
 
 <div class="post">
     <blockquote class="text">{!! $post->text !!}</blockquote>
