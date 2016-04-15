@@ -107,11 +107,13 @@ a.back:focus span {
 }
 
 .choices {
+    padding: 0;
     text-align: center;
 }
 
 .choices li {
     display: block;
+    margin-bottom: 5px;
 }
 
 footer {
