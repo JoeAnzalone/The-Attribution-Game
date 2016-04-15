@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <title>Tumblr Blog Authors</title>
+    <title>The Attribution Game™</title>
     <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
