@@ -4,9 +4,9 @@
     <h2 class="prompt">Who said this?</h2>
 @else
     @if ($is_correct)
-        <h2 class="response">You got it!</h2>
+        <h2 class="response correct">Correct! ✓</h2>
     @else
-        <h2 class="response">You're wrong!</h2>
+        <h2 class="response wrong">Wrong! ✗</h2>
     @endif
 @endif
 

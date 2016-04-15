@@ -74,9 +74,25 @@ a.back:focus span {
 .prompt,
 .response {
     font-size: 20px;
-    margin-bottom: 0;
+    margin-bottom: 7px;
+    padding: 5px;
     font-weight: normal;
     text-align: center;
+    border-radius: 3px;
+    border: 1px solid transparent;
+}
+
+.response {
+    color: #ddd;
+    border-color: inherit;
+}
+
+.response.correct {
+    background: rgba(86, 188, 138, 0.9);
+}
+
+.response.wrong {
+    background: rgba(217, 94, 64, 0.9);
 }
 
 .post {
