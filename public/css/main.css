@@ -126,7 +126,32 @@ a.back:focus span {
 
 .choices li {
     display: block;
-    margin-bottom: 5px;
+    margin: 25px 0;
+}
+
+@media screen and (min-width: 600px) {
+    .choices li {
+        display: inline-block;
+         margin-left: 20px;
+         margin-right: 20px;
+    }
+
+    .choices li:first-child {
+        margin-left: 0;
+    }
+
+    .choices li:last-child {
+        margin-right: 0;
+    }
+}
+
+.choices a {
+    display: inline-block;
+    padding: 10px;
+    min-width: 100px;
+    border: 1px solid;
+    border-radius: 3px;
+    background: rgba(82, 158, 204, 0.5);
 }
 
 footer {
