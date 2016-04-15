@@ -28,5 +28,5 @@
 </ul>
 
 <footer>
-    <p>This thing was created by Tumblr user <a href="https://HTMLbyJoe.tumblr.com" target="_blank">HTMLbyJoe</a> for funsies.</p>
+    <p>Created by Tumblr user <a href="https://HTMLbyJoe.tumblr.com" target="_blank">HTMLbyJoe</a> for funsies</p>
 </footer>
