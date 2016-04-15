@@ -1,4 +1,4 @@
-<h1 class="site-title">The Attribution Game™</h1>
+<h1 class="site-title"><a href="/">The Attribution Game™</a></h1>
 
 @if (!isset($guess))
     <h2 class="prompt">Who said this?</h2>
