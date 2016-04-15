@@ -71,14 +71,11 @@ a.back:focus span {
     font-size: 15px;
 }
 
-.prompt {
+.prompt,
+.response {
     font-size: 20px;
     margin-bottom: 0;
     font-weight: normal;
-    text-align: center;
-}
-
-.response {
     text-align: center;
 }
 
