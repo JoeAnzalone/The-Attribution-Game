@@ -38,8 +38,8 @@ button {
     cursor: pointer;
 }
 
-a.back span,
-a.back span {
+a.another .icon,
+a.back .icon {
     display: inline-block;
     -webkit-transition: 1s;
     -moz-transition: 1s;
@@ -48,8 +48,10 @@ a.back span {
     transition: 1s;
 }
 
-a.back:hover span,
-a.back:focus span {
+a.another:hover .icon,
+a.another:focus .icon,
+a.back:hover .icon,
+a.back:focus .icon {
     -webkit-transform: rotate(-320deg);
     -moz-transform: rotate(-320deg);
     -ms-transform: rotate(-320deg);
@@ -144,7 +146,8 @@ a.back:focus span {
     }
 }
 
-.choices a {
+.choices a,
+a.another {
     display: inline-block;
     padding: 10px;
     min-width: 100px;

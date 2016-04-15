@@ -17,7 +17,7 @@
 @if (isset($guess))
     <div class="prompt">
         <p><a target="_href" href="{{ $post->post_url }}">{{ $correct_answer }} said this!</a></p>
-        <p><a href="/">Another!</a></p>
+        <p><a href="/" class="another"><span class="icon">&circlearrowleft;</span> Another!</a></p>
     </div>
 @endif
 
