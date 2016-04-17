@@ -9,19 +9,22 @@ class Blog extends Model
 {
     public $postsPerPage = 20;
 
-    public function __construct($blog_name) {
+    public function __construct($blog_name)
+    {
         $this->blog_name = $blog_name;
         $this->client    = $client = new \Tumblr\API\Client(
                                         env('TUMBLR.CONSUMER_KEY')
                                     );
     }
 
-    private function _totalPosts($type = null) {
+    private function _totalPosts($type = null)
+    {
         $response = $this->client->getBlogPosts($this->blog_name, ['type' => $type, 'limit' => 1]);
         return $response->total_posts;
     }
 
-    private function _namesByOffset($offset, $limit = 20) {
+    private function _namesByOffset($offset, $limit = 20)
+    {
 
         $options = ['offset' => $offset, 'limit' => $limit, 'type' => 'quote'];
         $response = $this->client->getBlogPosts($this->blog_name, $options);
@@ -36,7 +39,8 @@ class Blog extends Model
         return $names;
     }
 
-    public function allNames() {
+    public function allNames()
+    {
         if (Cache::has('allNames')) {
             return Cache::get('allNames');
         }
@@ -60,7 +64,8 @@ class Blog extends Model
         return $names;
     }
 
-    public function randomNames($how_many_total = 4, $include = false) {
+    public function randomNames($how_many_total = 4, $include = false)
+    {
         $all_names = $this->allNames();
 
         if ($include && ($key = array_search($include, $all_names)) !== false) {
@@ -83,7 +88,8 @@ class Blog extends Model
         return $names;
     }
 
-    public function randomQuotePost() {
+    public function randomQuotePost()
+    {
         $total_posts = $this->_totalPosts('quote');
         $offset = rand(0, $total_posts - 1);
         $options = ['offset' => $offset, 'limit' => 1, 'type' => 'quote'];
