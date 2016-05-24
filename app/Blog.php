@@ -45,7 +45,7 @@ class Blog extends Model
             return Cache::get('allNames');
         }
 
-        $total_posts = $this->_totalPosts();
+        $total_posts = $this->_totalPosts('quote');
         $pages = round($total_posts / $this->postsPerPage);
 
         $names = [];
