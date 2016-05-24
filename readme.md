@@ -1,21 +1,16 @@
-# Lumen PHP Framework
+The Attribution Game™
+=====================
 
-[![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
-[![Total Downloads](https://poser.pugx.org/laravel/lumen-framework/d/total.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/lumen-framework/v/stable.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/lumen-framework/v/unstable.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![License](https://poser.pugx.org/laravel/lumen-framework/license.svg)](https://packagist.org/packages/laravel/lumen-framework)
+A fun little guessing game using posts from [overheardathq.tumblr.com](https://overheardathq.tumblr.com)
 
-Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
+Get presented with a random quote post from the blog, and try to guess who said it!
+(answers are stored as the first tag on the post)
 
-## Official Documentation
+The Attribution Game™ was created by [Joe Anzalone](https://HTMLbyJoe.tumblr.com) at [Tumblr](https://tumblr.com) for Tumblr’s Spring 2016 Hack Day.
 
-Documentation for the framework can be found on the [Lumen website](http://lumen.laravel.com/docs).
 
-## Security Vulnerabilities
+License
+-------
+The Attribution Game™ is open-sourced software licensed under the [BSD 3-Clause license.](https://opensource.org/licenses/BSD-3-Clause)
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Lumen framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+The Attribution Game™ uses the wonderful [Lumen PHP Framework](https://lumen.laravel.com), which is licensed under [the MIT license.](https://opensource.org/licenses/MIT)
